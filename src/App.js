@@ -22,11 +22,12 @@ class App extends Component {
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       createUserProfileDocument(user);
-
+      this.setState({currentUser: user});
+      
       console.log(user);
     });
   }
-
+  
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }

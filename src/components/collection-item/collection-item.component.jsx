@@ -9,8 +9,8 @@ const CollectionItem = ({ id, name, price, imageUrl }) => (
                 backgroundImage: `url(${imageUrl})`
             }} />
         <div className="collection-footer">
-            <dov className="name">{name}</dov>
-            <dov className="price">{price}</dov>
+            <div className="name">{name}</div>
+            <div className="price">{price}</div>
         </div>
     </div>
 )
